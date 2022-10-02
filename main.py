@@ -160,13 +160,13 @@ class Game:
                 pygame.draw.rect(window, tile_colors[self.board[i][j]], (j * sqsize, i * sqsize, sqsize - 1, sqsize - 1))
 
         label = font.render(self.algs[self.alg % 4], 1, grey)
-        window.blit(label, (10, 10))
-
-        label = font.render("Nodes Explored: " + str(self.exp), 1, grey)
         window.blit(label, (w - label.get_width() - 10, 10))
 
+        label = font.render("Nodes Explored: " + str(self.exp), 1, grey)
+        window.blit(label, (10, 10))
+
         label = font.render("Path Length: " + str(self.path_len), 1, grey)
-        window.blit(label, (w - label.get_width() - 10, 40))
+        window.blit(label, (10, 40))
 
         # Show fps
         clock.tick(60)
@@ -212,6 +212,11 @@ class Game:
             elif self.alg % 4 == 3:
                 best_i = 0
 
+            # Check if no open nodes
+            if len(open_list) == 0:
+                print("No path found, try removing some walls")
+                return
+
             # Select new node
             current_node = open_list[best_i]
             open_list.pop(best_i)
@@ -236,7 +241,7 @@ class Game:
                                 self.render()
 
                             else:
-                                return True
+                                return
 
             # Evaluate new nodes
             for move in moves:

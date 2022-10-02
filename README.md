@@ -20,10 +20,10 @@ R - Clear and reset board
 T - Clear visualized path
 
 # Algorithms
-A* -> Weighted + Shortest path
-Greedy -> Weighted + Not always shortest path + Fastest
-Hybrid -> Weighted + Not always shortest path + More consistent than Greedy but a bit slower
-BFS -> Unweighted + Shortest path
+A* -> Weighted + Shortest path  
+Greedy -> Weighted + Not always shortest path + Fastest  
+Hybrid -> Weighted + Not always shortest path + More consistent than Greedy but a bit slower  
+BFS -> Unweighted + Shortest path  
 
 # Future Updates???
 1. More algorithms

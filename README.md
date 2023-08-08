@@ -8,15 +8,22 @@ A pathfinding visualizer made with python and pygame
 
 # Controls
 Left click - Place wall
+
 Right click - Remove wall
 
+
 Space - Visualize algorithm
+
 Left/Right arrows - Change algorithms
 
+
 S - Move start node
+
 E - Move end node
 
+
 R - Clear and reset board
+
 T - Clear visualized path
 
 # Algorithms
